@@ -7,7 +7,7 @@ from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader, random_split
 
 
-batch_size = 1
+batch_size = 64
 lr = 1e-4
 num_workers = 8
 num_epochs = 100
@@ -93,7 +93,7 @@ for epoch in range(num_epochs):
             outputs = model(inputs)
 
             # Counting L1 loss
-            loss =  criterion(outputs, labels.float())
+            loss =  criterion(outputs, labels.float().unsqueeze(1))
             
             # Success metric
             l_outputs= outputs.round().flatten().tolist()

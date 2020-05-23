@@ -9,4 +9,4 @@ Simple example to count balls using Pytorch
 2. `docker exec -it cnn_counting bash`
 3. `python train.py`
 
-Note: For some reason it only works with batch size 1
+Thanks [ptrblckk](https://discuss.pytorch.org/u/ptrblck) for your help!
